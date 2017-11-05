@@ -2,6 +2,9 @@ package com.example.john.fruitmachine;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,10 +15,12 @@ import static org.junit.Assert.assertEquals;
 public class FruitMachineTest {
 
     FruitMachine fruitMachine;
+    FruitMachine spyFruitMachine;
 
     @Before
     public void setUp() throws Exception {
-        fruitMachine = new FruitMachine(100, 3);
+        fruitMachine = new FruitMachine(100, 3, 1);
+        spyFruitMachine = new FruitMachine(100, 3, 1);
     }
 
     @Test
@@ -43,4 +48,10 @@ public class FruitMachineTest {
         fruitMachine.spin();
         assertEquals(3, fruitMachine.getResults().size());
     }
+
+    //test win true or false with mockito??
+    @Test
+    public void testCheckWin() throws Exception {
+    }
+
 }
