@@ -17,7 +17,7 @@ public class FruitMachine {
     int slots;
     int cost;
 
-    public FruitMachine(int funds, int slots, int cost) {
+    protected FruitMachine(int funds, int slots, int cost) {
         this.symbols = new ArrayList<>();
         this.results = new ArrayList<>();
         this.funds = funds;
